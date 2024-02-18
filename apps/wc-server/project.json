@@ -1,0 +1,24 @@
+{
+  "name": "wc-server",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/wc-server/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "wc-server:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "wc-server:build:development"
+        },
+        "production": {
+          "buildTarget": "wc-server:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}
